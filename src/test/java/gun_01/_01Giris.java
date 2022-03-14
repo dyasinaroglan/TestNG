@@ -26,14 +26,6 @@ public class _01Giris {
     }
 
 
-
-
-
-
-
-
-
-
     /*
     functional testlerin yapılması için bir tool
     Assertion

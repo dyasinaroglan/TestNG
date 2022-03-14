@@ -41,8 +41,13 @@ public class _06Ornek {
         driver.findElement(By.id("txtUsername")).sendKeys("Admin");
         driver.findElement(By.id("txtPassword")).sendKeys("admin123");
         driver.findElement(By.id("btnLogin")).click();
+
         String welcomeText = driver.findElement(By.id("welcome")).getText();
         Assert.assertTrue(welcomeText.contains("welcome"));
+
+        String welcomeText = driver.findElement(By.linkText("Welcome kanth")).getText();
+        Assert.assertTrue(welcomeText.contains("welcome kanth"));
+
     }
     @AfterClass
     public void afterClass(){
