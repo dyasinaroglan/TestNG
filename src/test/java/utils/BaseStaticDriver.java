@@ -2,6 +2,8 @@ package utils;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -37,6 +39,30 @@ public class BaseStaticDriver {
     }
     public void sendKeysTo(By locator,String str){
        wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).sendKeys(str);
-
+    }
+    public void hover(WebElement element, long mılıs){
+        new Actions(driver).moveToElement(element).pause(mılıs).build().perform();
+        //webElement gönderdim movetoElement elemente gidecek
+    }
+    public void hover(WebElement element){
+        hover(element,50); //şeklinde de yazabilirim
+    }
+    public void sleep(long milis){
+       try {
+           Thread.sleep(milis);
+       }catch (InterruptedException e){
+           e.printStackTrace();
+       }
     }
 }
+
+
+      /*
+        //null return eder.
+        driver.findElements(By.cssSelector("ul#asd")).get(0); //0. indexli elementi verir.
+        //hata return eder.
+        driver.findElement(By.cssSelector("ul#asd"));  //buda ilk bulduğu elementi verir. yani ikisi de bu şekilde aynı elemeti verir.
+
+         */
+         // TODO: 20.03.2022 ancak aradaki en önemli fark  ikinci olan element bulamazsa hata return eder.
+         //todo diğeri ise null return eder.

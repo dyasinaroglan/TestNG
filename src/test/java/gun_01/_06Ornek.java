@@ -45,7 +45,7 @@ public class _06Ornek {
         String welcomeText = driver.findElement(By.id("welcome")).getText();
         Assert.assertTrue(welcomeText.contains("welcome"));
 
-        String welcomeText = driver.findElement(By.linkText("Welcome kanth")).getText();
+        String welcomeText1 = driver.findElement(By.linkText("Welcome kanth")).getText();
         Assert.assertTrue(welcomeText.contains("welcome kanth"));
 
     }

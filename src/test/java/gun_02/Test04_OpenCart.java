@@ -30,7 +30,7 @@ public class Test04_OpenCart extends BaseStaticDriver {
         openSite(urlStaticClass);
         sendKeysTo(lsearchInput_interFace,"mac");
         clickTo(lsearchButtonStaticCLass);
-        List<WebElement> menuler = driver.findElements(By.cssSelector(""));
+        List<WebElement> menuler = driver.findElements(By.cssSelector("ul.nav.navbar-nav > li"));
 
         for (int i = 0; i < menuler.size(); i++) {
             Assert.assertEquals(menuler.get(i).getText(),menu.get(i));
