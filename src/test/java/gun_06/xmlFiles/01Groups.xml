@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="Grup Testi">
+        <groups>
+            <run>
+                <include name="A"/>
+
+            </run>
+        </groups>
+        <classes>
+            <class name="gun_06.texts.TestClass1"></class>
+            <class name="gun_06.texts.TestClass2"></class>
+        </classes>
+    </test>
+</suite>
+
+        <!--  isimleri TestClass1 ve TestClass2 olan iki classın içinded bulunan testleri
+         A ve B şeklinde iki gruba ayırdık.
+         sonra A grubunda olanlar include olsun yani test edilsin
+         B Grubunda olanlar exclude olsun yani test'e tabi olmasınlar-->
+
+<!--birden fazla grup ismi verebilirim. -->
+<!-- groups'ları test'lerin altına yazarız. zaten classes içinde çıkmazlar.-->
