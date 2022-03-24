@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+
+    <parameter name="username" value="testngkurs@gmail.com"></parameter>
+    <parameter name="password" value="testngkurs"></parameter>
+    <parameter name="text" value="test devam ediyor."></parameter>
+
+    <test verbose="2" preserve-order="true" name="MyTest">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="gun_07.testLoginComment.TestLogin">
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="MyTest1">
+        <parameter name="browser" value="edge"></parameter>
+        <classes>
+            <class name="gun_07.testLoginComment.TestLogin">
+            </class>
+        </classes>
+    </test>
+</suite>
+
+<!-- iki farklı browser çalıştırmak istediğimizde her test in altına browser parametresini koyarız.  -->

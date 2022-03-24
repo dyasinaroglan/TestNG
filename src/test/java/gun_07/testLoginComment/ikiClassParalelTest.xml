@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="classes" thread-count="2">
+
+    <parameter name="browser" value="chrome"></parameter>
+    <parameter name="username" value="testngkurs@gmail.com"></parameter>
+    <parameter name="password" value="testngkurs"></parameter>
+    <parameter name="text" value="test devam ediyor."></parameter>
+
+    <test verbose="2" preserve-order="true" name="MyTest">
+        <classes>
+            <class name="gun_07.testLoginComment.TestLogin"/>
+            <class name="gun_07.testLoginComment.DriverBaseClass">
+            </class>
+        </classes>
+    </test>
+</suite>
