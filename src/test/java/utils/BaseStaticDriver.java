@@ -19,14 +19,16 @@ public class BaseStaticDriver {
     public BaseStaticDriver() {
         this.driver = Driver.getDriver();
         driver.manage().window().maximize();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
-
+/*
     @AfterSuite
     public void afterSuite(){
         sleep(2000);
         Driver.quitDriver();
     }
+
+ */
     public void openSite(String url){  //aldığı url yi get eden method
         driver.get(url);
     }
